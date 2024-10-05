@@ -1,0 +1,16 @@
+#book-container{
+  display: flex;
+  gap: 40px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.movie-class{
+  width: 300px;
+  border-radius: 10%;
+}
+.movie-class:hover{
+  width: 360px;
+  transition: all ease-out 1s;
+  border-radius: 10%;
+}
