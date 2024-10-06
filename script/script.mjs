@@ -140,32 +140,34 @@ async function getCharacters() {
 }
 
 
+// PAGINATION TAKES TOO MUCH REQUESTS
 
+// let data= []
 
-
-
-export async function getAllCharacters() {
+// export async function getAllCharacters() {
   
-  try{
+//   try{
      
-    const response = await fetch(`${url}/character?limit=30`,{
-      headers:{
-        Accept:'application/json',
-        Authorization:'Bearer l9VNVBx3WbbYbwy6T89a'
+//     const response = await fetch(`${url}/character?limit=30`,{
+//       headers:{
+//         Accept:'application/json',
+//         Authorization:'Bearer l9VNVBx3WbbYbwy6T89a'
       
-      }
-    });
+//       }
+//     });
    
-    if(!response.ok){
-      throw new Error(`Response statuse : ${response.status}`)
-    }
+//     if(!response.ok){
+//       throw new Error(`Response statuse : ${response.status}`)
+//     }
 
-    const characters = await response.json();
-     helper.renderData(characters.docs)
+//     const characters = await response.json();
+//     data = characters.docs
+   
 
-  }catch(err){
-    console.log(err)
-  }
+//   }catch(err){
+//     console.log(err)
+//   }
 
-}
+// }
 
+// helper.renderData(data)
