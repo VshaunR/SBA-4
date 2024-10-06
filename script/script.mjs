@@ -15,15 +15,14 @@ const headers={
 
 
 
- const theBooks = document.getElementById('Books');
+
  const theMovies = document.getElementById('Movies');
  const  mainCharacters = document.getElementById('Main-Characters')
-let main = document.getElementById('main-container');
- theBooks.addEventListener('click',(e)=>{
-  e.preventDefault();
+ const allCharacters = document.getElementById('all-Characters')
+
+
   getBooks()
-  console.log('click')
- });
+
 
  theMovies.addEventListener(('click'),(e)=>{
   e.preventDefault();
@@ -37,6 +36,11 @@ let main = document.getElementById('main-container');
   getCharacters();
  });
 
+ allCharacters.addEventListener(('click'),(e)=>{
+  e.preventDefault();
+
+  helper.renderData();
+ });
 
 
 async function getBooks(){
@@ -134,3 +138,34 @@ async function getCharacters() {
   }
 
 }
+
+
+
+
+
+
+export async function getAllCharacters() {
+  
+  try{
+     
+    const response = await fetch(`${url}/character?limit=30`,{
+      headers:{
+        Accept:'application/json',
+        Authorization:'Bearer l9VNVBx3WbbYbwy6T89a'
+      
+      }
+    });
+   
+    if(!response.ok){
+      throw new Error(`Response statuse : ${response.status}`)
+    }
+
+    const characters = await response.json();
+     helper.renderData(characters.docs)
+
+  }catch(err){
+    console.log(err)
+  }
+
+}
+

@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
   <title>Document</title>
 </head>
 <body>
@@ -14,7 +17,8 @@
       <li class="item">
         <a href="" class="link" id="Books">Books</a>
         <a href="" class="link" id="Movies">Movies</a>
-        <a href="" class="link" id="Main-Characters">Characters</a>
+        <a href="" class="link" id="Main-Characters">Main Characters</a>
+        <a href="" class="link" id="all-Characters">Lists of All Characters</a>
       </li>
     </ul>
   </nav>
@@ -33,6 +37,7 @@
   <div class="book">
     <img src="" alt="">
     <p></p>
+    <p class="summary"></p>
   </div>
 </template>
 <template id="movie-template">
@@ -49,8 +54,14 @@
    
   </div>
 </template>
+<template id="pagination-template">
+ <nav id="pagination">
+  <button id="previous">Previous</button>
+  <next id="next">Next</next>
+ </nav >
+</template>
 <footer class="footer">
-
+ 
 
 </footer>
 

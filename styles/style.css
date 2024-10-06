@@ -11,7 +11,7 @@
   transition: all ease-out 1s;
 }
 .movie-class:hover{
-  width: 360px;
+  width: 340px;
   transition: all ease-out 1s;
   border-radius: 10%;
 }
@@ -29,8 +29,15 @@
 body{
   margin: 0;
   padding: 0;
+  font-family: "MedievalSharp", cursive;
+  font-weight: 400;
+  font-style: normal;
+ 
+ 
+ 
 }
 .container{
+  
   display: grid;
   grid-template-rows: auto 1fr auto;
   height: 100vh;
@@ -44,25 +51,40 @@ body{
   pad: 1rem;
   display: flex;
   justify-content: center;
+  height: 20vh;
+  margin-bottom: 1rem;
+  background-color: aliceblue;
 }
 .main{
   grid-area: main;
+
+
+}
+.link:hover{
+  background-color: azure;
   padding: 1rem;
-  margin: 1rem;
+  transition: all ease-in .5s;
+  border-radius: 10px;
 }
 .footer{
   grid-area: footer;
   pad: 1rem;
   display: flex;
   justify-content: center;
+  height: 20vh;
 }
 .item{
   display: flex;
   gap: 40px;
+  margin-bottom: 1rem;
 }
 
 a{
   text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+ 
+  
 }
 li{
   list-style: none;
