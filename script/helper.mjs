@@ -114,13 +114,14 @@ let li= document.createElement('li');
 let li2= document.createElement('li');
 let li3= document.createElement('li');
 let li4= document.createElement('li');
-let li5= document.createElement('li');
+let a= document.createElement('a');
+
 li.textContent = name.name
 li2.textContent = name.height
 li3.textContent = name.race
 li4.textContent = name.realm
-li5.textContent = name.wikiUrl
-
+a.textContent = name.wikiUrl
+a.setAttribute('href',name.wikiUrl)
 
 
 
@@ -128,7 +129,7 @@ content.querySelector('ul').appendChild(li)
 content.querySelector('ul').appendChild(li2)
 content.querySelector('ul').appendChild(li3)
 content.querySelector('ul').appendChild(li4)
-content.querySelector('ul').appendChild(li5)
+content.querySelector('ul').appendChild(a)
 
 bookContainer.appendChild(content)
 

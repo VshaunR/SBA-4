@@ -8,6 +8,7 @@
 .movie-class{
   width: 300px;
   border-radius: 10%;
+  transition: all ease-out 1s;
 }
 .movie-class:hover{
   width: 360px;
@@ -16,4 +17,53 @@
 }
 .character-class{
   width: 300px;
+  border-radius: 10%;
+  transition: all ease-out 1s;
+}
+.character-class:hover{
+  width: 360px;
+  transition: all ease-out 1s;
+  border-radius: 10%;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+.container{
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  height: 100dvh;
+  grid-template-areas: "header header header"
+                        "main main main"
+                        "footer footer footer";
+}
+.header{
+  grid-area: header;
+  pad: 1rem;
+  display: flex;
+  justify-content: center;
+}
+.main{
+  grid-area: main;
+  padding: 1rem;
+  margin: 1rem;
+}
+.footer{
+  grid-area: footer;
+  pad: 1rem;
+  display: flex;
+  justify-content: center;
+}
+.item{
+  display: flex;
+  gap: 40px;
+}
+
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
 }
