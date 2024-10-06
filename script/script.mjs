@@ -17,18 +17,27 @@ const headers={
 
  const theBooks = document.getElementById('Books');
  const theMovies = document.getElementById('Movies');
+ const  mainCharacters = document.getElementById('Main-Characters')
 let main = document.getElementById('main-container');
  theBooks.addEventListener('click',(e)=>{
   e.preventDefault();
   getBooks()
   console.log('click')
- })
+ });
 
  theMovies.addEventListener(('click'),(e)=>{
   e.preventDefault();
 
   getMovies();
- })
+ });
+
+ mainCharacters.addEventListener(('click'),(e)=>{
+  e.preventDefault();
+
+  getCharacters();
+ });
+
+
 
 async function getBooks(){
 
@@ -85,6 +94,41 @@ async function getMovies() {
     }
     // console.log(movie.docs)
    helper.getMovieNames(movie.docs)
+  }catch(err){
+    console.log(err)
+  }
+
+}
+
+
+
+
+
+async function getCharacters() {
+  
+  try{
+     
+    const response = await fetch(`${url}/character`,{
+      headers:{
+        Accept:'application/json',
+        Authorization:'Bearer l9VNVBx3WbbYbwy6T89a'
+      
+      }
+    });
+   
+    if(!response.ok){
+      throw new Error(`Response statuse : ${response.status}`)
+    }
+
+    const characters = await response.json();
+    let theMainCharacters = helper.getMainCharacters(characters.docs)
+    // console.log(characters.docs)
+    for(let i in image.characterImage){
+      theMainCharacters[i].src = image.characterImage[i].src;
+      theMainCharacters[i].alt =image.characterImage[i].alt;
+    }
+    // console.log(theMainCharacters)
+    helper.createMainCharacters(theMainCharacters)
   }catch(err){
     console.log(err)
   }

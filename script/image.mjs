@@ -60,3 +60,52 @@ export let movieImage =[
 
 
 ]
+
+
+
+export let characterImage =[
+  {
+    src:'../image/characters/Aragorn.jpg',
+    alt:'The FellowShip of The Ring'
+  }
+  ,
+  {
+    src:'../image/characters/Frodo.webp',
+    alt:'The FellowShip of The Ring'
+  }
+  ,
+  {
+    src:'../image/characters/Boromir.jpg',
+    alt:'The FellowShip of The Ring'
+  }
+  ,
+  {
+    src:'../image/characters/Samwise.jpg',
+    alt:'The FellowShip of The Ring'
+  }
+  ,
+  {
+    src:'../image/characters/Gimli.webp',
+    alt:'The FellowShip of The Ring'
+  }
+  ,
+  {
+    src:'../image/characters/Legolas.webp',
+    alt:'The FellowShip of The Ring'
+  },
+  {
+    src:'../image/characters/Merry.jpg',
+    alt:'The Two Towers'
+  },
+  {
+    src:'../image/characters/Pippin.webp',
+    alt:'The Return of The King'
+  },
+  {
+    src:'../image/characters/Gandalf_The_White.webp',
+    alt:'The Return of The King'
+  }
+  
+
+
+]
