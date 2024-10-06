@@ -89,3 +89,10 @@ a{
 li{
   list-style: none;
 }
+
+.wiki-a:hover{
+background-color: aliceblue;
+padding: 1red;
+border-radius: 10px;
+transition: all ease-in .5s;
+}

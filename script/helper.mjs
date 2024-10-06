@@ -127,6 +127,7 @@ li2.textContent = name.height
 li3.textContent = name.race
 li4.textContent = name.realm
 a.textContent = name.wikiUrl
+a.setAttribute('class','wiki-a')
 a.setAttribute('href',name.wikiUrl)
 
 
@@ -150,32 +151,32 @@ bookContainer.appendChild(content)
 
 
 
-export async function renderData(dataTable){
-  await script.getAllCharacters();
-  let pageSize=10;
-let currentPage=1;
+// export async function renderData(dataTable){
+//   await script.getAllCharacters();
+//   let pageSize=10;
+// let currentPage=1;
 
-  let char ="";
-  bookContainer.innerHTML=``;
-  await dataTable.filter((row,index)=>{
+//   let char ="";
+//   bookContainer.innerHTML=``;
+//   await dataTable.filter((row,index)=>{
  
-    let start = (currentPage-1 *pageSize);
-    let end = currentPage*pageSize;
-    let content = paginationTemplate.content.cloneNode(true);
-    bookContainer.appendChild(content)
-    if(index >=start && index <end) return true;
-  }).forEach(data=>{
+//     let start = (currentPage-1 *pageSize);
+//     let end = currentPage*pageSize;
+//     let content = paginationTemplate.content.cloneNode(true);
+//     bookContainer.appendChild(content)
+//     if(index >=start && index <end) return true;
+//   }).forEach(data=>{
     
-  bookContainer.innerHTML += `
+//   bookContainer.innerHTML += `
   
  
-    <ul>
-    <li>${data.name}</li>
-    <li></li>
-    <li></li>
-    </ul>
+//     <ul>
+//     <li>${data.name}</li>
+//     <li></li>
+//     <li></li>
+//     </ul>
 
-    `
+//     `
 
-  });
-}
+//   });
+// }

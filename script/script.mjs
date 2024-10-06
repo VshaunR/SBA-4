@@ -36,11 +36,11 @@ const headers={
   getCharacters();
  });
 
- allCharacters.addEventListener(('click'),(e)=>{
-  e.preventDefault();
+//  allCharacters.addEventListener(('click'),(e)=>{
+//   e.preventDefault();
 
-  helper.renderData();
- });
+//   helper.renderData();
+//  });
 
 
 async function getBooks(){
@@ -171,3 +171,16 @@ async function getCharacters() {
 // }
 
 // helper.renderData(data)
+
+
+async function getQuotes() {
+  
+
+  try{
+
+    
+  }catch(err){
+    console.log(err)
+  }
+
+}
