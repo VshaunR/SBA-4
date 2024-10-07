@@ -13,3 +13,7 @@ git clone https://github.com/VshaunR/SBA-4.git
 #### Description
 This is a SPA using the https://the-one-api.dev/ API
 To display information about the Lord Of The Rings Books/Movies/Main Characters
+
+####
+Resources for pagination
+https://youtu.be/Sgn0Ed0chhk?si=7E93AES5dN9q8fJ1
